@@ -32,10 +32,11 @@
       }
 
       .page {
-        width: 210mm;
+        width: min(210mm, 100%);
+        max-width: 210mm;
         min-height: 297mm;
         margin: 0 auto;
-        padding: 14mm 14mm 14mm;
+        padding: clamp(16px, 4vw, 28px);
       }
 
       .header {
@@ -62,7 +63,7 @@
 
       .subline {
         margin: 6px 0 0;
-        font-size: 12px;
+        font-size: clamp(11px, 2.4vw, 12px);
         line-height: 1.5;
         color: var(--muted);
         max-width: 160mm;
@@ -88,10 +89,13 @@
 
       .contact-inline {
         margin-top: 10px;
-        font-size: 11.5px;
+        font-size: clamp(11px, 2.4vw, 11.5px);
         line-height: 1.35;
         color: var(--muted);
         word-break: break-word;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 10px;
       }
 
       .contact-inline strong {
@@ -102,6 +106,13 @@
       .contact-inline a {
         color: var(--muted);
         text-decoration: underline;
+      }
+
+      .contact-item {
+        display: inline-flex;
+        gap: 6px;
+        align-items: baseline;
+        flex-wrap: wrap;
       }
 
       .section {
@@ -217,6 +228,13 @@
           margin: 0;
         }
       }
+
+      @media (max-width: 760px) {
+        .role-top {
+          flex-wrap: wrap;
+          gap: 6px 10px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -225,15 +243,11 @@
         <h1 class="name">Ali Adam Yagoub Abdallah</h1>
         <p class="headline">AI Engineer · Full-Stack Developer (MERN) · SaaS Founder</p>
         <div class="contact-inline">
-          <strong>Email:</strong> <a href="mailto:Aliyajoub@gmail.com">Aliyajoub@gmail.com</a>
-          &nbsp;|&nbsp;
-          <strong>Phone:</strong> <a href="tel:+256741490119">+256 741490119</a>
-          &nbsp;|&nbsp;
-          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ali-adam">https://www.linkedin.com/in/ali-adam</a>
-          &nbsp;|&nbsp;
-          <strong>GitHub:</strong> <a href="https://github.com/ali418">https://github.com/ali418</a>
-          &nbsp;|&nbsp;
-          <strong>Location:</strong> Uganda
+          <span class="contact-item"><strong>Email:</strong> <a href="mailto:Aliyajoub@gmail.com">Aliyajoub@gmail.com</a></span>
+          <span class="contact-item"><strong>Phone:</strong> <a href="tel:+256741490119">+256 741490119</a></span>
+          <span class="contact-item"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ali-adam">https://www.linkedin.com/in/ali-adam</a></span>
+          <span class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/ali418">https://github.com/ali418</a></span>
+          <span class="contact-item"><strong>Location:</strong> Uganda</span>
         </div>
         <p class="subline">
           Results-oriented engineer building integrated management systems (ERP/POS/inventory/e-commerce)

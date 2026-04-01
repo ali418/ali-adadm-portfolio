@@ -33,10 +33,11 @@
       }
 
       .page {
-        width: 210mm;
+        width: min(210mm, 100%);
+        max-width: 210mm;
         min-height: 297mm;
         margin: 0 auto;
-        padding: 14mm 14mm 12mm;
+        padding: clamp(16px, 4vw, 28px);
       }
 
       .header {
@@ -67,10 +68,10 @@
 
       .subline {
         margin: 6px 0 0;
-        font-size: 12px;
+        font-size: clamp(11px, 2.4vw, 12px);
         line-height: 1.5;
         color: var(--muted2);
-        max-width: 82mm;
+        max-width: 160mm;
       }
 
       .contact {
@@ -239,6 +240,28 @@
           width: auto;
           min-height: auto;
           margin: 0;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .contact,
+        .downloads {
+          text-align: left;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+
+        .project-links {
+          white-space: normal;
         }
       }
     </style>

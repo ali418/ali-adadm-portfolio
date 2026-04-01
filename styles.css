@@ -59,7 +59,7 @@ body.rtl {
 .page {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 24px 16px 40px;
+  padding: clamp(18px, 4vw, 26px) clamp(14px, 3vw, 18px) clamp(28px, 6vw, 46px);
   position: relative;
   isolation: isolate;
 }
@@ -112,6 +112,8 @@ body.rtl {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 12px;
   margin-bottom: 32px;
 }
 
@@ -181,7 +183,7 @@ body.rtl {
 }
 
 .hero-text h1 {
-  font-size: 32px;
+  font-size: clamp(28px, 4.8vw, 40px);
   line-height: 1.15;
   margin-bottom: 12px;
   background: linear-gradient(to right, var(--text), rgba(165, 180, 252, 1));
@@ -190,7 +192,7 @@ body.rtl {
 }
 
 .hero-text p {
-  font-size: 15px;
+  font-size: clamp(14px, 2.2vw, 16px);
   line-height: 1.6;
   color: var(--muted);
   max-width: 640px;
@@ -208,8 +210,10 @@ body.rtl {
 }
 
 .hero-photo img {
-  width: 260px;
-  height: 320px;
+  width: clamp(220px, 62vw, 320px);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
   border-radius: 24px;
   object-fit: cover;
   object-position: 50% 10%;
@@ -738,6 +742,18 @@ body.rtl {
 
   .contact-actions .btn {
     flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-cta .btn,
+  .contact-actions .btn,
+  .card-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .project-tags {
+    justify-content: flex-start;
   }
 }
 
