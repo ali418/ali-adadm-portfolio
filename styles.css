@@ -64,7 +64,6 @@ body.rtl {
   padding: clamp(18px, 4vw, 26px) clamp(14px, 3vw, 18px) clamp(28px, 6vw, 46px);
   position: relative;
   isolation: isolate;
-  overflow-x: hidden;
 }
 
 .page::before,
