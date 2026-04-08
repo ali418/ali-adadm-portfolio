@@ -1,0 +1,102 @@
+ملاحظات تحسين السيرة الذاتية (ATS) — نسخة مرتبة وقابلة للتنفيذ
+
+روابط مهمة
+- Portfolio: https://ali-adam-portfolio.up.railway.app/
+- CV ATS PDF (ملف): Ali-Adam-Yagoub-CV-ATS.pdf
+
+الهدف
+تحويل السيرة إلى صفحة واحدة قوية، واضحة للـ ATS، وتبرز المشاريع الأقوى بالأرقام والنتائج
+
+1) إصلاحات حرجة (لازم تتعمل أولاً)
+- رقم الهاتف لازم يكون بصيغة دولية قابلة للقراءة: +256 741490119
+- رابط LinkedIn لازم يكون رابط مباشر صحيح بدون مسافات: https://ug.linkedin.com/in/ali-adam-31a9812a3
+- رابط GitHub لازم يكون صحيح بدون مسافات: https://github.com/ali418
+- توحيد كتابة الاسم بالحروف الكبيرة: Ali Adam Yagoub Abdallah
+- إزالة أي روابط مكتوبة داخل backticks أو فيها مسافات لأنها بتتكسر عند النسخ
+
+2) هيكل سيرة مقترح (صفحة واحدة)
+Header
+Name | Title | Location
+Email | Phone | LinkedIn | GitHub | Portfolio
+
+Core Skills (سطرين إلى ثلاثة فقط)
+
+Experience (2 Entries فقط)
+- Founder & Technical Lead — K4 IT (Feb 2020 – Present)
+- Freelance / Independent Full‑Stack Developer (ضع التاريخ) أو Role مناسب حسب واقعك
+
+Projects (أقوى قسم عندك)
+4–5 مشاريع بأسماء واضحة وروابط مباشرة ونتائج بالأرقام
+
+Education + Certifications (مختصر جداً)
+Languages (سطر واحد)
+
+3) قواعد كتابة bullets (مهم للـ ATS)
+- كل Bullet: فعل قوي + ماذا بنيت/حسّنت + نتيجة/رقم
+- بدون عناوين داخل bullet مثل: System Architecture: أو Database Management:
+- بدون جمل عامة مثل: Demonstrated ability... أو Responsible for...
+- لا تنهي bullets بنقطة
+- توحيد تنسيق التواريخ في كل السيرة (مثلاً: Feb 2020 – Present)
+
+4) ترتيب Skills بشكل احترافي (بدون تكرار)
+Languages: Python, JavaScript, SQL
+Frameworks: React, Redux, Node.js, Express, Flutter
+Databases: PostgreSQL, MySQL, MongoDB, SQLite
+AI / CV: YOLO, OpenCV, TensorFlow, NumPy, Pandas
+Tools: Git, GitHub, Postman, Railway, Power BI, Jupyter
+Networking / IoT: LoRa/4G, GNSS/GPS, IoT protocols
+
+5) قالب جاهز لقسم المشاريع (استخدمه لكل مشروع)
+Project Name — Short value statement
+Tech: (Stack)
+Links: Live | GitHub
+- Built/Designed … resulting in … ([X] users, [X] orders, [X]%, [X]ms, [X] FPS)
+- Optimized … reducing … by … ([X]%)
+- Implemented … improving … ([X])
+
+6) مشاريع لازم تتكتب كـ Entries كاملة (نماذج جاهزة للتعديل)
+
+Key Market — Integrated ERP & E‑commerce System
+Tech: React, Node.js/Express, PostgreSQL, JWT, Railway
+Links: Live: https://key-market-2-production.up.railway.app/  GitHub: https://github.com/ali418/key-Market-2
+- Built a production-ready retail platform covering inventory, sales, and admin reporting serving [X] products and processing [X] orders
+- Optimized checkout and data fetching reducing average load time by [X]% and query latency by [X]ms
+- Implemented secure auth and role-based admin workflows for daily operations
+
+Weapon Detection & Alert System
+Tech: Python, YOLO, OpenCV, Telegram/Email alerts
+Links: GitHub: https://github.com/aliyajoub/ali
+- Built real-time weapon detection achieving [X]% precision at [X] FPS on [device]
+- Automated Telegram/email alerts reducing response time by [X]% compared to manual monitoring
+- Added logging/frame capture for incident review and analysis
+
+Facial Recognition Access Control
+Tech: Python, Computer Vision, Security
+Links: GitHub: https://github.com/aliyajoub/Ai
+- Developed face recognition access control with event logging and admin tooling
+- Achieved [X]% recognition accuracy in pilot setup and reduced unauthorized attempts by [X]%
+- Integrated with door automation/hardware workflow for secure entry
+
+Drone Licensing Platform — Ministry of Defense
+Tech: (حدد Web stack + DB + auth)
+Links: Available upon request
+- Delivered UAV licensing platform digitizing registration and compliance workflows for a government partner
+- Reduced manual processing time by [X]% and onboarded ~[X] operators within [X] months
+- Implemented secure role-based approvals and audit logs for compliance
+
+AR Paint Visualization App — Al‑Shorouq Paints
+Tech: Flutter, Camera/AR, (Backend if any)
+Links: (App Store/Play Store أو Demo)
+- Built mobile app enabling real-time paint color visualization on surfaces improving customer experience
+- Increased engagement by ~[X]% and supported conversion uplift by [X]% in pilot rollout
+- Optimized camera pipeline for smooth real-time preview on mid-range devices
+
+7) أسئلة أرقام لازم تجاوب عليها عشان السيرة تصير قوية جداً
+- Key Market: عدد المنتجات، عدد الطلبات/المعاملات، عدد المستخدمين/العملاء، زمن الاستجابة قبل/بعد التحسين
+- K4 IT: عدد العملاء، حجم الفريق، نوع المشاريع، نتائج واضحة (تقليل وقت، زيادة مبيعات، رفع كفاءة)
+- وزارة الدفاع: عدد الرخص/المعاملات، حجم التشغيل، تقليل زمن الإجراءات
+- تطبيق AR: هل نازل Store، عدد التحميلات، التفاعل، أي نتيجة واضحة
+- مشاريع CV: الدقة Accuracy/Precision، FPS، الأجهزة المستهدفة، تقليل الإنذارات الخاطئة
+
+ملاحظة مهمة
+لو ما عندك أرقام دقيقة، اكتب تقديرات واقعية مع (~) أفضل من عدم وجود أي رقم
