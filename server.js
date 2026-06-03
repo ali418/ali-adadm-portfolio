@@ -31,7 +31,7 @@ app.get('/{*path}', (req, res) => {
 // ── MongoDB + Server startup ────────────────────────────────
 async function start() {
   try {
-    await mongoose.connect(MONGODB_URI);
+    await mongoose.connect(MONGODB_URI, { dbName: 'portfolio_reviews' });
     console.log('✅  MongoDB connected:', MONGODB_URI);
 
     // Auto-seed on first deploy (skipped if data already exists)

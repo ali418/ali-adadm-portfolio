@@ -75,19 +75,19 @@ const SEED_REVIEWS = [
 
 async function seed(standalone = false) {
   if (standalone) {
-    await mongoose.connect(MONGO_URI);
-    console.log('🌱  Seeder connected to MongoDB');
+    await mongoose.connect(MONGO_URI, { dbName: 'portfolio_reviews' });
+    console.log('🌱  Seeder connected to MongoDB → portfolio_reviews');
   }
 
   const count = await Review.countDocuments();
   if (count > 0) {
-    console.log(`✅  Seed skipped — ${count} review(s) already exist.`);
+    console.log(`✅  Seed skipped — ${count} review(s) already exist in portfolio_reviews.`);
     if (standalone) await mongoose.disconnect();
     return;
   }
 
   await Review.insertMany(SEED_REVIEWS);
-  console.log(`🌱  Seeded ${SEED_REVIEWS.length} reviews successfully.`);
+  console.log(`🌱  Seeded ${SEED_REVIEWS.length} reviews into portfolio_reviews.reviews ✅`);
 
   if (standalone) await mongoose.disconnect();
 }
