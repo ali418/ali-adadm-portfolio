@@ -704,149 +704,180 @@
 
       <!-- ═══ TESTIMONIALS ═══ -->
       <section id="testimonials" class="section">
-        <div class="section-header">
-          <h2 data-lang-section="en">Client Reviews</h2>
-          <h2 data-lang-section="ar">آراء العملاء</h2>
+
+        <!-- Section header with stats inline -->
+        <div class="rev-header">
+          <div>
+            <h2 data-lang-section="en">Client Reviews</h2>
+            <h2 data-lang-section="ar">آراء العملاء</h2>
+            <p class="rev-sub" data-lang-section="en">What clients say about working with me</p>
+            <p class="rev-sub" data-lang-section="ar">ما يقوله العملاء عن تجربة العمل معي</p>
+          </div>
+          <div class="rev-badges">
+            <div class="rev-badge">
+              <span class="rev-badge-num">★ 5.0</span>
+              <span class="rev-badge-lbl" data-lang-section="en">Rating</span>
+              <span class="rev-badge-lbl" data-lang-section="ar">تقييم</span>
+            </div>
+            <div class="rev-badge">
+              <span class="rev-badge-num">5+</span>
+              <span class="rev-badge-lbl" data-lang-section="en">Clients</span>
+              <span class="rev-badge-lbl" data-lang-section="ar">عميل</span>
+            </div>
+            <div class="rev-badge">
+              <span class="rev-badge-num">4</span>
+              <span class="rev-badge-lbl" data-lang-section="en">Countries</span>
+              <span class="rev-badge-lbl" data-lang-section="ar">دول</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Stats bar -->
-        <div class="testi-stats">
-          <div class="testi-stat">
-            <span class="testi-stat-num">5+</span>
-            <span class="testi-stat-label" data-lang-section="en">Happy Clients</span>
-            <span class="testi-stat-label" data-lang-section="ar">عميل راضٍ</span>
-          </div>
-          <div class="testi-stat-sep"></div>
-          <div class="testi-stat">
-            <span class="testi-stat-num">★ 5.0</span>
-            <span class="testi-stat-label" data-lang-section="en">Average Rating</span>
-            <span class="testi-stat-label" data-lang-section="ar">متوسط التقييم</span>
-          </div>
-          <div class="testi-stat-sep"></div>
-          <div class="testi-stat">
-            <span class="testi-stat-num">4+</span>
-            <span class="testi-stat-label" data-lang-section="en">Countries</span>
-            <span class="testi-stat-label" data-lang-section="ar">دولة</span>
-          </div>
+        <!-- Carousel wrapper -->
+        <div class="rev-carousel-wrap">
+          <button class="rev-arrow rev-prev" id="revPrev" aria-label="Previous">&#8592;</button>
+          <button class="rev-arrow rev-next" id="revNext" aria-label="Next">&#8594;</button>
+
+          <div class="rev-track" id="revTrack">
+
+            <!-- Card 1 -->
+            <div class="rev-card" style="--rc:#22d3ee">
+              <div class="rev-card-top">
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-tag" data-lang-section="en">ERP System</div>
+                <div class="rev-tag" data-lang-section="ar">نظام ERP</div>
+              </div>
+              <blockquote class="rev-quote" data-lang-section="en">
+                &ldquo;Ali built our entire ERP and POS system from scratch. Delivery was fast, the system is rock-solid stable &mdash; we&rsquo;ve been running daily operations on it for over a year. He doesn&rsquo;t just write code, he thinks through the business logic.&rdquo;
+              </blockquote>
+              <blockquote class="rev-quote" data-lang-section="ar">
+                &ldquo;علي بنى لنا نظام ERP و POS بالكامل من الصفر. التسليم سريع، النظام مستقر تماماً، وشغّالين عليه يومياً منذ أكثر من سنة. ما بيكتب كود فقط &mdash; بيفكر في المنطق التجاري.&rdquo;
+              </blockquote>
+              <div class="rev-author">
+                <div class="rev-avatar" style="background:linear-gradient(135deg,#22d3ee,#0e75b6)">KM</div>
+                <div class="rev-info">
+                  <div class="rev-name">Khalid Al-Mansouri</div>
+                  <div class="rev-loc" data-lang-section="en">&#128205; Riyadh, Saudi Arabia</div>
+                  <div class="rev-loc" data-lang-section="ar">&#128205; الرياض، المملكة العربية السعودية</div>
+                  <div class="rev-role" data-lang-section="en">Retail Business Owner</div>
+                  <div class="rev-role" data-lang-section="ar">صاحب محل تجزئة</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="rev-card" style="--rc:#a78bfa">
+              <div class="rev-card-top">
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-tag" data-lang-section="en">Cafe Platform</div>
+                <div class="rev-tag" data-lang-section="ar">منصة كافيه</div>
+              </div>
+              <blockquote class="rev-quote" data-lang-section="en">
+                &ldquo;The online ordering platform he built for our cafe is incredibly smooth. Orders come in automatically and the dashboard is simple enough for our whole team to manage with zero training.&rdquo;
+              </blockquote>
+              <blockquote class="rev-quote" data-lang-section="ar">
+                &ldquo;منصة الطلبات الأونلاين لكافيهنا سلسة جداً. الطلبات بتيجي تلقائياً ولوحة التحكم سهلة على الفريق كله من غير أي تدريب.&rdquo;
+              </blockquote>
+              <div class="rev-author">
+                <div class="rev-avatar" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">SA</div>
+                <div class="rev-info">
+                  <div class="rev-name">Sara Al-Ameen</div>
+                  <div class="rev-loc" data-lang-section="en">&#128205; Khartoum, Sudan</div>
+                  <div class="rev-loc" data-lang-section="ar">&#128205; الخرطوم، السودان</div>
+                  <div class="rev-role" data-lang-section="en">Cafe Owner &mdash; Cafe Sundus</div>
+                  <div class="rev-role" data-lang-section="ar">صاحبة كافيه سندس</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="rev-card" style="--rc:#22c55e">
+              <div class="rev-card-top">
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-tag" data-lang-section="en">E-Commerce</div>
+                <div class="rev-tag" data-lang-section="ar">متجر إلكتروني</div>
+              </div>
+              <blockquote class="rev-quote" data-lang-section="en">
+                &ldquo;We needed a full e-commerce store with admin management on a tight deadline. Ali delivered exactly what we needed &mdash; clean code, great UX, and perfectly on schedule. Very professional.&rdquo;
+              </blockquote>
+              <blockquote class="rev-quote" data-lang-section="ar">
+                &ldquo;احتجنا متجر إلكتروني كامل مع لوحة إدارة في وقت ضيّق. علي سلّم بالضبط &mdash; كود نظيف، تجربة مستخدم ممتازة، وفي الموعد تماماً. محترف جداً.&rdquo;
+              </blockquote>
+              <div class="rev-author">
+                <div class="rev-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a)">RA</div>
+                <div class="rev-info">
+                  <div class="rev-name">Rania Abdullah</div>
+                  <div class="rev-loc" data-lang-section="en">&#128205; Dubai, UAE</div>
+                  <div class="rev-loc" data-lang-section="ar">&#128205; دبي، الإمارات العربية المتحدة</div>
+                  <div class="rev-role" data-lang-section="en">Beauty Products Entrepreneur</div>
+                  <div class="rev-role" data-lang-section="ar">رائدة أعمال منتجات تجميل</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="rev-card" style="--rc:#f59e0b">
+              <div class="rev-card-top">
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-tag" data-lang-section="en">AI Security</div>
+                <div class="rev-tag" data-lang-section="ar">أمن بالذكاء الاصطناعي</div>
+              </div>
+              <blockquote class="rev-quote" data-lang-section="en">
+                &ldquo;The AI weapon detection system Ali built for our security project truly exceeded expectations. Real-time alerts, accurate detection, and a solid backend integration that just works.&rdquo;
+              </blockquote>
+              <blockquote class="rev-quote" data-lang-section="ar">
+                &ldquo;نظام كشف الأسلحة بالذكاء الاصطناعي اللي بناه علي فاق توقعاتنا فعلاً. تنبيهات لحظية، كشف دقيق، وتكامل قوي مع الباك إند.&rdquo;
+              </blockquote>
+              <div class="rev-author">
+                <div class="rev-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">MH</div>
+                <div class="rev-info">
+                  <div class="rev-name">Mohammed Hamdan</div>
+                  <div class="rev-loc" data-lang-section="en">&#128205; Kampala, Uganda</div>
+                  <div class="rev-loc" data-lang-section="ar">&#128205; كمبالا، أوغندا</div>
+                  <div class="rev-role" data-lang-section="en">Security Systems Manager</div>
+                  <div class="rev-role" data-lang-section="ar">مدير أنظمة أمنية</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="rev-card" style="--rc:#0e75b6">
+              <div class="rev-card-top">
+                <div class="rev-stars">★★★★★</div>
+                <div class="rev-tag" data-lang-section="en">Corporate Site</div>
+                <div class="rev-tag" data-lang-section="ar">موقع شركة</div>
+              </div>
+              <blockquote class="rev-quote" data-lang-section="en">
+                &ldquo;Professional, responsive, and technically sharp. Ali built our company website and the result went far beyond what we imagined. His communication throughout the project was outstanding.&rdquo;
+              </blockquote>
+              <blockquote class="rev-quote" data-lang-section="ar">
+                &ldquo;محترف، متجاوب، وحاد تقنياً. علي بنى موقع شركتنا والنتيجة فاقت ما تخيلناه. تواصله مع العميل طوال المشروع كان ممتازاً.&rdquo;
+              </blockquote>
+              <div class="rev-author">
+                <div class="rev-avatar" style="background:linear-gradient(135deg,#0e75b6,#1d4ed8)">AO</div>
+                <div class="rev-info">
+                  <div class="rev-name">Ahmed Omar</div>
+                  <div class="rev-loc" data-lang-section="en">&#128205; Cairo, Egypt</div>
+                  <div class="rev-loc" data-lang-section="ar">&#128205; القاهرة، مصر</div>
+                  <div class="rev-role" data-lang-section="en">IT Company Director</div>
+                  <div class="rev-role" data-lang-section="ar">مدير شركة تقنية</div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /rev-track -->
+        </div><!-- /rev-carousel-wrap -->
+
+        <!-- Dots -->
+        <div class="rev-dots" id="revDots">
+          <button class="rev-dot active" data-idx="0"></button>
+          <button class="rev-dot" data-idx="1"></button>
+          <button class="rev-dot" data-idx="2"></button>
+          <button class="rev-dot" data-idx="3"></button>
+          <button class="rev-dot" data-idx="4"></button>
         </div>
 
-        <div class="testi-bento">
-
-          <!-- Featured wide card -->
-          <div class="testi-item testi-featured" style="--tc:#22d3ee">
-            <div class="testi-qmark">"</div>
-            <p class="testi-body" data-lang-section="en">
-              Ali built our entire ERP and POS system from scratch. The delivery was fast,
-              the system is rock-solid stable, and we've been running daily operations on it
-              for over a year without issues. He doesn't just write code — he thinks through
-              the business logic. Highly recommended.
-            </p>
-            <p class="testi-body" data-lang-section="ar">
-              علي بنى لنا نظام ERP و POS بالكامل من الصفر. التسليم كان سريع، النظام مستقر
-              تماماً، وشغّالين عليه يومياً منذ أكثر من سنة بدون أي مشاكل. ما بيكتب كود فقط —
-              بيفكر في المنطق التجاري كمان. أنصح بيه بشدة.
-            </p>
-            <div class="testi-footer">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#22d3ee,#0e75b6)">KM</div>
-              <div class="testi-meta">
-                <div class="testi-name">Khalid Al-Mansouri</div>
-                <div class="testi-loc" data-lang-section="en">📍 Riyadh, Saudi Arabia · Retail Business Owner</div>
-                <div class="testi-loc" data-lang-section="ar">📍 الرياض، المملكة العربية السعودية · صاحب محل تجزئة</div>
-              </div>
-              <div class="testi-rating">★★★★★</div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="testi-item" style="--tc:#a78bfa">
-            <div class="testi-qmark">"</div>
-            <p class="testi-body" data-lang-section="en">
-              The online ordering platform for our cafe is incredibly smooth.
-              Orders come in automatically and the dashboard is easy for our whole team.
-            </p>
-            <p class="testi-body" data-lang-section="ar">
-              منصة الطلبات الأونلاين لكافيهنا سلسة جداً.
-              الطلبات بتيجي تلقائياً ولوحة التحكم سهلة على الفريق كله.
-            </p>
-            <div class="testi-footer">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">SA</div>
-              <div class="testi-meta">
-                <div class="testi-name">Sara Al-Ameen</div>
-                <div class="testi-loc" data-lang-section="en">📍 Khartoum, Sudan · Cafe Owner</div>
-                <div class="testi-loc" data-lang-section="ar">📍 الخرطوم، السودان · صاحبة كافيه</div>
-              </div>
-              <div class="testi-rating">★★★★★</div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="testi-item" style="--tc:#22c55e">
-            <div class="testi-qmark">"</div>
-            <p class="testi-body" data-lang-section="en">
-              We needed a full e-commerce store with admin management in a short time.
-              Ali delivered exactly what we needed — clean code, great UX, on schedule.
-            </p>
-            <p class="testi-body" data-lang-section="ar">
-              احتجنا متجر إلكتروني كامل مع إدارة في وقت قصير.
-              علي سلّم بالضبط — كود نظيف، تجربة مستخدم ممتازة، وفي الوقت المحدد.
-            </p>
-            <div class="testi-footer">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a)">RA</div>
-              <div class="testi-meta">
-                <div class="testi-name">Rania Abdullah</div>
-                <div class="testi-loc" data-lang-section="en">📍 Dubai, UAE · Beauty Entrepreneur</div>
-                <div class="testi-loc" data-lang-section="ar">📍 دبي، الإمارات · رائدة أعمال تجميل</div>
-              </div>
-              <div class="testi-rating">★★★★★</div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="testi-item" style="--tc:#f59e0b">
-            <div class="testi-qmark">"</div>
-            <p class="testi-body" data-lang-section="en">
-              The AI weapon detection system exceeded our expectations.
-              Real-time alerts, accurate detection, and solid backend integration.
-            </p>
-            <p class="testi-body" data-lang-section="ar">
-              نظام كشف الأسلحة بالذكاء الاصطناعي فاق توقعاتنا.
-              تنبيهات لحظية، كشف دقيق، وتكامل قوي مع الباك إند.
-            </p>
-            <div class="testi-footer">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">MH</div>
-              <div class="testi-meta">
-                <div class="testi-name">Mohammed Hamdan</div>
-                <div class="testi-loc" data-lang-section="en">📍 Kampala, Uganda · Security Manager</div>
-                <div class="testi-loc" data-lang-section="ar">📍 كمبالا، أوغندا · مدير أنظمة أمنية</div>
-              </div>
-              <div class="testi-rating">★★★★★</div>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="testi-item" style="--tc:#0e75b6">
-            <div class="testi-qmark">"</div>
-            <p class="testi-body" data-lang-section="en">
-              Professional, responsive, and technically sharp. Ali built our company website
-              and the result was beyond what we imagined. Great communication throughout.
-            </p>
-            <p class="testi-body" data-lang-section="ar">
-              محترف، متجاوب، وحاد تقنياً. علي بنى موقع شركتنا
-              والنتيجة فاقت ما تخيلناه. تواصل ممتاز طوال المشروع.
-            </p>
-            <div class="testi-footer">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#0e75b6,#1d4ed8)">AO</div>
-              <div class="testi-meta">
-                <div class="testi-name">Ahmed Omar</div>
-                <div class="testi-loc" data-lang-section="en">📍 Cairo, Egypt · IT Company Director</div>
-                <div class="testi-loc" data-lang-section="ar">📍 القاهرة، مصر · مدير شركة تقنية</div>
-              </div>
-              <div class="testi-rating">★★★★★</div>
-            </div>
-          </div>
-
-        </div>
       </section>
+
 
 
       <section id="contact" class="section">
@@ -989,7 +1020,58 @@
     }
 
     setupReveals();
-  </script>
+
+    /* ── Carousel logic ── */
+    (function () {
+      var track = document.getElementById('revTrack');
+      var dots  = document.querySelectorAll('.rev-dot');
+      var prev  = document.getElementById('revPrev');
+      var next  = document.getElementById('revNext');
+      if (!track) return;
+
+      var cards = track.querySelectorAll('.rev-card');
+      var current = 0;
+      var autoTimer;
+
+      function scrollTo(idx) {
+        if (idx < 0) idx = cards.length - 1;
+        if (idx >= cards.length) idx = 0;
+        current = idx;
+        cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        dots.forEach(function (d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      if (prev) prev.addEventListener('click', function () { scrollTo(current - 1); resetAuto(); });
+      if (next) next.addEventListener('click', function () { scrollTo(current + 1); resetAuto(); });
+      dots.forEach(function (d) {
+        d.addEventListener('click', function () { scrollTo(Number(d.dataset.idx)); resetAuto(); });
+      });
+
+      /* Auto-advance every 5 s */
+      function startAuto() { autoTimer = setInterval(function () { scrollTo(current + 1); }, 5000); }
+      function resetAuto()  { clearInterval(autoTimer); startAuto(); }
+      startAuto();
+
+      /* Drag-to-scroll */
+      var startX = 0, scrollLeft = 0, down = false;
+      track.addEventListener('mousedown', function (e) { down = true; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft; track.classList.add('is-dragging'); });
+      track.addEventListener('mouseleave', function () { down = false; track.classList.remove('is-dragging'); });
+      track.addEventListener('mouseup',    function () { down = false; track.classList.remove('is-dragging'); });
+      track.addEventListener('mousemove',  function (e) { if (!down) return; e.preventDefault(); track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX); });
+
+      /* Sync dots on native scroll */
+      track.addEventListener('scroll', function () {
+        var mid = track.scrollLeft + track.clientWidth / 2;
+        cards.forEach(function (c, i) {
+          if (c.offsetLeft <= mid && c.offsetLeft + c.offsetWidth > mid) {
+            if (current !== i) { current = i; dots.forEach(function (d, j) { d.classList.toggle('active', j === i); }); }
+          }
+        });
+      }, { passive: true });
+    }());
+</script>
 </body>
 </html>
 
