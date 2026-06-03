@@ -6,6 +6,7 @@ const cors     = require('cors');
 const path     = require('path');
 
 const reviewsRouter = require('./routes/reviews');
+const seed          = require('./seed');
 
 const app  = express();
 const PORT = process.env.PORT || 3001;
@@ -32,6 +33,10 @@ async function start() {
   try {
     await mongoose.connect(MONGODB_URI);
     console.log('✅  MongoDB connected:', MONGODB_URI);
+
+    // Auto-seed on first deploy (skipped if data already exists)
+    await seed();
+
     app.listen(PORT, () => {
       console.log(`🚀  Portfolio server running at http://localhost:${PORT}`);
     });

@@ -1439,3 +1439,283 @@ body.rtl .project-tags {
     display: block;
   }
 }
+
+/* ═══════════════════════════════════════════
+   PROFESSIONAL ANIMATIONS — UPGRADE PACK
+═══════════════════════════════════════════ */
+
+/* ── 1. Particle canvas layer ── */
+#particles-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+}
+
+/* ── 2. Hero name neon pulse ── */
+.hero-text h1 {
+  animation: neonPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  0%   { text-shadow: 0 0 0px transparent; }
+  50%  { text-shadow: 0 0 32px rgba(34,211,238,0.22), 0 0 64px rgba(34,211,238,0.10); }
+  100% { text-shadow: 0 0 0px transparent; }
+}
+
+/* ── 3. Typing cursor on hero kicker ── */
+.hero-kicker::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  color: #22d3ee;
+  animation: blink 1.1s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── 4. Logo spinning gradient border ── */
+.logo {
+  background: linear-gradient(135deg, #22c55e, #22d3ee, #a78bfa, #22c55e);
+  background-size: 300% 300%;
+  animation: gradientSpin 5s ease infinite;
+}
+
+@keyframes gradientSpin {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+/* ── 5. Section header h2 slide-in underline ── */
+.section-header h2,
+.bento-rev-title h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after,
+.bento-rev-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+  border-radius: 999px;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-header.is-visible h2::after,
+.bento-rev-title h2::after {
+  width: 100%;
+}
+
+/* ── 6. Card 3D tilt (mouse move — handled in JS) ── */
+.card,
+.bento-card {
+  transform-style: preserve-3d;
+  perspective: 800px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ── 7. Bento card glow pulse on hover ── */
+.bento-card:hover::after {
+  animation: glowPulse 1.6s ease-in-out infinite;
+  opacity: 0.18;
+}
+
+@keyframes glowPulse {
+  0%   { transform: scale(1);    opacity: 0.10; }
+  50%  { transform: scale(1.15); opacity: 0.22; }
+  100% { transform: scale(1);    opacity: 0.10; }
+}
+
+/* ── 8. Stat number count-up (class added by JS) ── */
+.bento-stat-num,
+.highlight-metric {
+  transition: transform 0.3s ease;
+}
+
+.bento-stat-num:hover,
+.highlight-metric:hover {
+  transform: scale(1.08);
+}
+
+/* ── 9. Shimmer on primary buttons ── */
+.btn.primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #22c55e, #22d3ee, #0e75b6);
+  background-size: 200% 200%;
+  animation: btnGradient 4s ease infinite;
+}
+
+@keyframes btnGradient {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+.btn.primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.28), transparent);
+  transform: skewX(-20deg);
+  animation: btnShimmer 3.5s ease-in-out infinite;
+}
+
+@keyframes btnShimmer {
+  0%   { left: -75%; }
+  60%  { left: 125%; }
+  100% { left: 125%; }
+}
+
+/* ── 10. Review form animated gradient border ── */
+.rev-form-wrap {
+  position: relative;
+}
+
+.rev-form-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #22d3ee, #a78bfa, #22c55e, #22d3ee);
+  background-size: 300% 300%;
+  animation: formBorderSpin 6s ease infinite;
+  z-index: -1;
+  opacity: 0.45;
+}
+
+@keyframes formBorderSpin {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+/* ── 11. Skills tag hover glow ── */
+.skill-group {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-group:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(34, 211, 238, 0.35);
+  box-shadow: 0 14px 40px rgba(34, 211, 238, 0.1);
+}
+
+/* ── 12. Hero photo depth glow ring ── */
+.hero-photo img {
+  position: relative;
+  box-shadow:
+    0 0 0 1px rgba(34,211,238,0.15),
+    0 20px 60px rgba(2,6,23,0.55),
+    0 0 80px rgba(34,211,238,0.08);
+  transition: box-shadow 0.4s ease;
+}
+
+.hero-photo img:hover {
+  box-shadow:
+    0 0 0 2px rgba(34,211,238,0.35),
+    0 24px 70px rgba(2,6,23,0.65),
+    0 0 120px rgba(34,211,238,0.16);
+}
+
+/* ── 13. Scroll progress bar ── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #22d3ee, #a78bfa, #22c55e);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(34,211,238,0.5);
+}
+
+/* ── 14. Contact card animated left border ── */
+.contact-card {
+  border-left: 3px solid transparent;
+  background-image:
+    linear-gradient(rgba(11,18,36,0.88), rgba(11,18,36,0.88)),
+    linear-gradient(180deg, #22d3ee, #a78bfa);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(34,211,238,0.12);
+}
+
+/* ── 15. Experience timeline bar ── */
+.experience {
+  border-left: 3px solid transparent;
+  background-image:
+    linear-gradient(rgba(11,18,36,0.72), rgba(11,18,36,0.72)),
+    linear-gradient(180deg, #22d3ee 0%, #a78bfa 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 36px rgba(34,211,238,0.08);
+}
+
+/* ── 16. Tag hover pop ── */
+.tag {
+  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
+}
+
+.tag:hover {
+  background: rgba(34,211,238,0.15);
+  color: #22d3ee;
+  transform: scale(1.06);
+}
+
+/* ── 17. Highlight cards count-up animation ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.highlight-card.is-visible .highlight-metric {
+  animation: countUp 0.7s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* ── 18. Footer social links glow on hover ── */
+.hero-links .link {
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.hero-links .link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+  transition: width 0.3s ease;
+}
+
+.hero-links .link:hover::after {
+  width: 100%;
+}
+
+.hero-links .link:hover {
+  color: #22d3ee;
+  text-shadow: 0 0 16px rgba(34,211,238,0.4);
+}

@@ -998,6 +998,12 @@
     </main>
   </div>
 
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Particles canvas -->
+  <canvas id="particles-canvas"></canvas>
+
   <script>
     const toggles = document.querySelectorAll(".lang-toggle");
     const sections = document.querySelectorAll("[data-lang-section]");
@@ -1307,6 +1313,156 @@
         setTimeout(function () { errorDiv.style.display = 'none'; }, 6000);
       }
 
+    }());
+
+    /* ═══════════════════════════════════════════════════════
+       PROFESSIONAL ANIMATIONS
+    ═══════════════════════════════════════════════════════ */
+
+    // ── 1. Scroll Progress Bar ──────────────────────────────
+    (function () {
+      var bar = document.getElementById('scroll-progress');
+      if (!bar) return;
+      function updateBar() {
+        var scrollTop  = window.scrollY || document.documentElement.scrollTop;
+        var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = pct.toFixed(2) + '%';
+      }
+      window.addEventListener('scroll', updateBar, { passive: true });
+      updateBar();
+    }());
+
+    // ── 2. Floating Particles Canvas ───────────────────────
+    (function () {
+      var canvas = document.getElementById('particles-canvas');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      var W, H, particles;
+      var COLORS = ['#22d3ee', '#a78bfa', '#22c55e', '#0e75b6', '#f59e0b'];
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+
+      function createParticles() {
+        var count = Math.floor((W * H) / 22000);
+        particles = [];
+        for (var i = 0; i < count; i++) {
+          particles.push({
+            x:     Math.random() * W,
+            y:     Math.random() * H,
+            r:     Math.random() * 1.4 + 0.4,
+            dx:    (Math.random() - 0.5) * 0.38,
+            dy:    (Math.random() - 0.5) * 0.38,
+            color: COLORS[Math.floor(Math.random() * COLORS.length)],
+            alpha: Math.random() * 0.5 + 0.15,
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(function (p) {
+          p.x += p.dx;
+          p.y += p.dy;
+          if (p.x < 0) p.x = W;
+          if (p.x > W) p.x = 0;
+          if (p.y < 0) p.y = H;
+          if (p.y > H) p.y = 0;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+
+        // Draw connecting lines
+        for (var i = 0; i < particles.length; i++) {
+          for (var j = i + 1; j < particles.length; j++) {
+            var dx = particles[i].x - particles[j].x;
+            var dy = particles[i].y - particles[j].y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 90) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = particles[i].color;
+              ctx.globalAlpha = (1 - dist / 90) * 0.12;
+              ctx.lineWidth = 0.6;
+              ctx.stroke();
+            }
+          }
+        }
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', function () { resize(); createParticles(); });
+      resize();
+      createParticles();
+      draw();
+    }());
+
+    // ── 3. 3D Card Tilt on Mouse Move ──────────────────────
+    (function () {
+      var cards = document.querySelectorAll('.card, .bento-card');
+      var MAX_TILT = 6;
+
+      cards.forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          var rect   = card.getBoundingClientRect();
+          var cx     = rect.left + rect.width  / 2;
+          var cy     = rect.top  + rect.height / 2;
+          var dx     = (e.clientX - cx) / (rect.width  / 2);
+          var dy     = (e.clientY - cy) / (rect.height / 2);
+          var rotateX = (-dy * MAX_TILT).toFixed(2);
+          var rotateY = ( dx * MAX_TILT).toFixed(2);
+          card.style.transform = 'perspective(800px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-4px)';
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+        });
+      });
+    }());
+
+    // ── 4. Animated Number Counters ────────────────────────
+    (function () {
+      var stats = document.querySelectorAll('.bento-stat-num, .highlight-metric');
+
+      function animateCounter(el) {
+        var text    = el.textContent.trim();
+        var numPart = parseFloat(text.replace(/[^0-9.]/g, ''));
+        var suffix  = text.replace(/[0-9.]/g, '').replace(/^\s+|\s+$/g, '');
+        if (isNaN(numPart)) return;
+
+        var start     = 0;
+        var duration  = 1200;
+        var startTime = null;
+
+        function step(ts) {
+          if (!startTime) startTime = ts;
+          var progress = Math.min((ts - startTime) / duration, 1);
+          var ease     = 1 - Math.pow(1 - progress, 3);
+          var current  = Math.floor(ease * numPart);
+          el.textContent = (text.includes('★') ? '★ ' : '') + current + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+          else el.textContent = text; // restore original
+        }
+        requestAnimationFrame(step);
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.5 });
+
+      stats.forEach(function (el) { observer.observe(el); });
     }());
 
 </script>
