@@ -705,175 +705,261 @@
       <!-- ═══ TESTIMONIALS ═══ -->
       <section id="testimonials" class="section">
 
-        <!-- Section header with stats inline -->
-        <div class="rev-header">
-          <div>
-            <h2 data-lang-section="en">Client Reviews</h2>
-            <h2 data-lang-section="ar">آراء العملاء</h2>
-            <p class="rev-sub" data-lang-section="en">What clients say about working with me</p>
-            <p class="rev-sub" data-lang-section="ar">ما يقوله العملاء عن تجربة العمل معي</p>
+        <!-- Section header -->
+        <div class="bento-rev-header">
+          <div class="bento-rev-title">
+            <div class="bento-rev-label" data-lang-section="en">Client Reviews</div>
+            <div class="bento-rev-label" data-lang-section="ar">آراء العملاء</div>
+            <h2 data-lang-section="en">What clients say<br>about working with me</h2>
+            <h2 data-lang-section="ar">ما يقوله العملاء<br>عن تجربة العمل معي</h2>
           </div>
-          <div class="rev-badges">
-            <div class="rev-badge">
-              <span class="rev-badge-num">★ 5.0</span>
-              <span class="rev-badge-lbl" data-lang-section="en">Rating</span>
-              <span class="rev-badge-lbl" data-lang-section="ar">تقييم</span>
+          <div class="bento-rev-stats">
+            <div class="bento-stat">
+              <div class="bento-stat-num">★ 5.0</div>
+              <div class="bento-stat-lbl" data-lang-section="en">Average Rating</div>
+              <div class="bento-stat-lbl" data-lang-section="ar">متوسط التقييم</div>
             </div>
-            <div class="rev-badge">
-              <span class="rev-badge-num">5+</span>
-              <span class="rev-badge-lbl" data-lang-section="en">Clients</span>
-              <span class="rev-badge-lbl" data-lang-section="ar">عميل</span>
+            <div class="bento-stat-sep"></div>
+            <div class="bento-stat">
+              <div class="bento-stat-num">5+</div>
+              <div class="bento-stat-lbl" data-lang-section="en">Happy Clients</div>
+              <div class="bento-stat-lbl" data-lang-section="ar">عميل سعيد</div>
             </div>
-            <div class="rev-badge">
-              <span class="rev-badge-num">4</span>
-              <span class="rev-badge-lbl" data-lang-section="en">Countries</span>
-              <span class="rev-badge-lbl" data-lang-section="ar">دول</span>
+            <div class="bento-stat-sep"></div>
+            <div class="bento-stat">
+              <div class="bento-stat-num">4</div>
+              <div class="bento-stat-lbl" data-lang-section="en">Countries</div>
+              <div class="bento-stat-lbl" data-lang-section="ar">دول</div>
             </div>
           </div>
         </div>
 
-        <!-- Carousel wrapper -->
-        <div class="rev-carousel-wrap">
-          <button class="rev-arrow rev-prev" id="revPrev" aria-label="Previous">&#8592;</button>
-          <button class="rev-arrow rev-next" id="revNext" aria-label="Next">&#8594;</button>
+        <!-- Bento Grid -->
+        <div class="bento-rev-grid">
 
-          <div class="rev-track" id="revTrack">
-
-            <!-- Card 1 -->
-            <div class="rev-card" style="--rc:#22d3ee">
-              <div class="rev-card-top">
-                <div class="rev-stars">★★★★★</div>
-                <div class="rev-tag" data-lang-section="en">ERP System</div>
-                <div class="rev-tag" data-lang-section="ar">نظام ERP</div>
+          <!-- Featured card (wide) -->
+          <div class="bento-card bento-featured" style="--bc:#22d3ee">
+            <div class="bento-qmark">"</div>
+            <div class="bento-top-row">
+              <div class="bento-stars">★★★★★</div>
+              <span class="bento-badge" data-lang-section="en">ERP System</span>
+              <span class="bento-badge" data-lang-section="ar">نظام ERP</span>
+            </div>
+            <p class="bento-body" data-lang-section="en">
+              Ali built our entire ERP and POS system from scratch. Delivery was fast, the system is rock-solid stable — we've been running daily operations on it for over a year. He doesn't just write code, he thinks through the business logic end-to-end.
+            </p>
+            <p class="bento-body" data-lang-section="ar">
+              علي بنى لنا نظام ERP وPOS بالكامل من الصفر. التسليم كان سريعاً، والنظام مستقر تماماً — شغّالين عليه يومياً منذ أكثر من سنة. ما بيكتب كود فقط — بيفكر في المنطق التجاري من البداية للنهاية.
+            </p>
+            <div class="bento-author">
+              <div class="bento-avatar" style="background:linear-gradient(135deg,#22d3ee,#0e75b6)">KM</div>
+              <div class="bento-meta">
+                <div class="bento-name">Khalid Al-Mansouri</div>
+                <div class="bento-loc" data-lang-section="en">📍 Riyadh, Saudi Arabia</div>
+                <div class="bento-loc" data-lang-section="ar">📍 الرياض، المملكة العربية السعودية</div>
+                <div class="bento-role" style="color:#22d3ee" data-lang-section="en">Retail Business Owner</div>
+                <div class="bento-role" style="color:#22d3ee" data-lang-section="ar">صاحب محل تجزئة</div>
               </div>
-              <blockquote class="rev-quote" data-lang-section="en">
-                &ldquo;Ali built our entire ERP and POS system from scratch. Delivery was fast, the system is rock-solid stable &mdash; we&rsquo;ve been running daily operations on it for over a year. He doesn&rsquo;t just write code, he thinks through the business logic.&rdquo;
-              </blockquote>
-              <blockquote class="rev-quote" data-lang-section="ar">
-                &ldquo;علي بنى لنا نظام ERP و POS بالكامل من الصفر. التسليم سريع، النظام مستقر تماماً، وشغّالين عليه يومياً منذ أكثر من سنة. ما بيكتب كود فقط &mdash; بيفكر في المنطق التجاري.&rdquo;
-              </blockquote>
-              <div class="rev-author">
-                <div class="rev-avatar" style="background:linear-gradient(135deg,#22d3ee,#0e75b6)">KM</div>
-                <div class="rev-info">
-                  <div class="rev-name">Khalid Al-Mansouri</div>
-                  <div class="rev-loc" data-lang-section="en">&#128205; Riyadh, Saudi Arabia</div>
-                  <div class="rev-loc" data-lang-section="ar">&#128205; الرياض، المملكة العربية السعودية</div>
-                  <div class="rev-role" data-lang-section="en">Retail Business Owner</div>
-                  <div class="rev-role" data-lang-section="ar">صاحب محل تجزئة</div>
-                </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bento-card" style="--bc:#a78bfa">
+            <div class="bento-qmark">"</div>
+            <div class="bento-top-row">
+              <div class="bento-stars">★★★★★</div>
+              <span class="bento-badge" data-lang-section="en">Cafe Platform</span>
+              <span class="bento-badge" data-lang-section="ar">منصة كافيه</span>
+            </div>
+            <p class="bento-body" data-lang-section="en">
+              The online ordering platform he built for our cafe is incredibly smooth. Orders come in automatically and the dashboard is simple enough for our whole team to manage with zero training.
+            </p>
+            <p class="bento-body" data-lang-section="ar">
+              منصة الطلبات الأونلاين لكافيهنا سلسة جداً. الطلبات بتيجي تلقائياً ولوحة التحكم سهلة على الفريق كله من غير أي تدريب.
+            </p>
+            <div class="bento-author">
+              <div class="bento-avatar" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">SA</div>
+              <div class="bento-meta">
+                <div class="bento-name">Sara Al-Ameen</div>
+                <div class="bento-loc" data-lang-section="en">📍 Khartoum, Sudan</div>
+                <div class="bento-loc" data-lang-section="ar">📍 الخرطوم، السودان</div>
+                <div class="bento-role" style="color:#a78bfa" data-lang-section="en">Cafe Owner — Cafe Sundus</div>
+                <div class="bento-role" style="color:#a78bfa" data-lang-section="ar">صاحبة كافيه سندس</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bento-card" style="--bc:#22c55e">
+            <div class="bento-qmark">"</div>
+            <div class="bento-top-row">
+              <div class="bento-stars">★★★★★</div>
+              <span class="bento-badge" data-lang-section="en">E-Commerce</span>
+              <span class="bento-badge" data-lang-section="ar">متجر إلكتروني</span>
+            </div>
+            <p class="bento-body" data-lang-section="en">
+              We needed a full e-commerce store on a tight deadline. Ali delivered exactly what we needed — clean code, great UX, and perfectly on schedule. Very professional.
+            </p>
+            <p class="bento-body" data-lang-section="ar">
+              احتجنا متجر إلكتروني كامل في وقت ضيّق. علي سلّم بالضبط — كود نظيف، تجربة مستخدم ممتازة، وفي الموعد تماماً. محترف جداً.
+            </p>
+            <div class="bento-author">
+              <div class="bento-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a)">RA</div>
+              <div class="bento-meta">
+                <div class="bento-name">Rania Abdullah</div>
+                <div class="bento-loc" data-lang-section="en">📍 Dubai, UAE</div>
+                <div class="bento-loc" data-lang-section="ar">📍 دبي، الإمارات</div>
+                <div class="bento-role" style="color:#22c55e" data-lang-section="en">Beauty Products Entrepreneur</div>
+                <div class="bento-role" style="color:#22c55e" data-lang-section="ar">رائدة أعمال تجميل</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bento-card" style="--bc:#f59e0b">
+            <div class="bento-qmark">"</div>
+            <div class="bento-top-row">
+              <div class="bento-stars">★★★★★</div>
+              <span class="bento-badge" data-lang-section="en">AI Security</span>
+              <span class="bento-badge" data-lang-section="ar">أمن بالذكاء الاصطناعي</span>
+            </div>
+            <p class="bento-body" data-lang-section="en">
+              The AI weapon detection system Ali built truly exceeded expectations. Real-time alerts, accurate detection, and a solid backend integration that just works.
+            </p>
+            <p class="bento-body" data-lang-section="ar">
+              نظام كشف الأسلحة بالذكاء الاصطناعي فاق توقعاتنا فعلاً. تنبيهات لحظية، كشف دقيق، وتكامل قوي مع الباك إند.
+            </p>
+            <div class="bento-author">
+              <div class="bento-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">MH</div>
+              <div class="bento-meta">
+                <div class="bento-name">Mohammed Hamdan</div>
+                <div class="bento-loc" data-lang-section="en">📍 Kampala, Uganda</div>
+                <div class="bento-loc" data-lang-section="ar">📍 كمبالا، أوغندا</div>
+                <div class="bento-role" style="color:#f59e0b" data-lang-section="en">Security Systems Manager</div>
+                <div class="bento-role" style="color:#f59e0b" data-lang-section="ar">مدير أنظمة أمنية</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bento-card" style="--bc:#0e75b6">
+            <div class="bento-qmark">"</div>
+            <div class="bento-top-row">
+              <div class="bento-stars">★★★★★</div>
+              <span class="bento-badge" data-lang-section="en">Corporate Site</span>
+              <span class="bento-badge" data-lang-section="ar">موقع شركة</span>
+            </div>
+            <p class="bento-body" data-lang-section="en">
+              Professional, responsive, and technically sharp. Ali built our company website and the result went far beyond what we imagined. His communication throughout the project was outstanding.
+            </p>
+            <p class="bento-body" data-lang-section="ar">
+              محترف، متجاوب، وحاد تقنياً. علي بنى موقع شركتنا والنتيجة فاقت ما تخيلناه. تواصله طوال المشروع كان ممتازاً.
+            </p>
+            <div class="bento-author">
+              <div class="bento-avatar" style="background:linear-gradient(135deg,#0e75b6,#1d4ed8)">AO</div>
+              <div class="bento-meta">
+                <div class="bento-name">Ahmed Omar</div>
+                <div class="bento-loc" data-lang-section="en">📍 Cairo, Egypt</div>
+                <div class="bento-loc" data-lang-section="ar">📍 القاهرة، مصر</div>
+                <div class="bento-role" style="color:#0e75b6" data-lang-section="en">IT Company Director</div>
+                <div class="bento-role" style="color:#0e75b6" data-lang-section="ar">مدير شركة تقنية</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /bento-rev-grid -->
+
+        <!-- ── Dynamic Reviews from DB ── -->
+        <div id="dynamicReviewsWrap" style="margin-top:28px; display:none;">
+          <div class="dynrev-label">
+            <span data-lang-section="en">Recent Client Reviews</span>
+            <span data-lang-section="ar">أحدث تقييمات العملاء</span>
+          </div>
+          <div class="bento-rev-grid" id="dynamicReviewsGrid">
+            <!-- injected by JS -->
+          </div>
+        </div>
+
+        <!-- ── Review Submission Form ── -->
+        <div class="rev-form-wrap" id="revFormSection">
+          <div class="rev-form-header">
+            <div class="rev-form-icon">✍️</div>
+            <div>
+              <h3 data-lang-section="en">Share Your Experience</h3>
+              <h3 data-lang-section="ar">شارك تجربتك معنا</h3>
+              <p data-lang-section="en">Worked with me? Leave a review — it takes 60 seconds.</p>
+              <p data-lang-section="ar">اشتغلت معي؟ اترك تقييمك — ما تاخذ دقيقة.</p>
+            </div>
+          </div>
+
+          <form id="reviewForm" class="rev-form" novalidate>
+
+            <!-- Row 1: Name + Role -->
+            <div class="rev-form-row">
+              <div class="rev-field">
+                <label for="rev-name" data-lang-section="en">Your Name *</label>
+                <label for="rev-name" data-lang-section="ar">اسمك *</label>
+                <input id="rev-name" name="name" type="text" placeholder="e.g. Ahmed Ali" autocomplete="name" required>
+              </div>
+              <div class="rev-field">
+                <label for="rev-role" data-lang-section="en">Your Role</label>
+                <label for="rev-role" data-lang-section="ar">وظيفتك</label>
+                <input id="rev-role" name="role" type="text" placeholder="e.g. Business Owner">
               </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="rev-card" style="--rc:#a78bfa">
-              <div class="rev-card-top">
-                <div class="rev-stars">★★★★★</div>
-                <div class="rev-tag" data-lang-section="en">Cafe Platform</div>
-                <div class="rev-tag" data-lang-section="ar">منصة كافيه</div>
+            <!-- Row 2: Location + Project -->
+            <div class="rev-form-row">
+              <div class="rev-field">
+                <label for="rev-location" data-lang-section="en">Location</label>
+                <label for="rev-location" data-lang-section="ar">المدينة / الدولة</label>
+                <input id="rev-location" name="location" type="text" placeholder="e.g. Riyadh, Saudi Arabia">
               </div>
-              <blockquote class="rev-quote" data-lang-section="en">
-                &ldquo;The online ordering platform he built for our cafe is incredibly smooth. Orders come in automatically and the dashboard is simple enough for our whole team to manage with zero training.&rdquo;
-              </blockquote>
-              <blockquote class="rev-quote" data-lang-section="ar">
-                &ldquo;منصة الطلبات الأونلاين لكافيهنا سلسة جداً. الطلبات بتيجي تلقائياً ولوحة التحكم سهلة على الفريق كله من غير أي تدريب.&rdquo;
-              </blockquote>
-              <div class="rev-author">
-                <div class="rev-avatar" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">SA</div>
-                <div class="rev-info">
-                  <div class="rev-name">Sara Al-Ameen</div>
-                  <div class="rev-loc" data-lang-section="en">&#128205; Khartoum, Sudan</div>
-                  <div class="rev-loc" data-lang-section="ar">&#128205; الخرطوم، السودان</div>
-                  <div class="rev-role" data-lang-section="en">Cafe Owner &mdash; Cafe Sundus</div>
-                  <div class="rev-role" data-lang-section="ar">صاحبة كافيه سندس</div>
-                </div>
+              <div class="rev-field">
+                <label for="rev-project" data-lang-section="en">Project Type</label>
+                <label for="rev-project" data-lang-section="ar">نوع المشروع</label>
+                <input id="rev-project" name="project" type="text" placeholder="e.g. ERP System, Website...">
               </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="rev-card" style="--rc:#22c55e">
-              <div class="rev-card-top">
-                <div class="rev-stars">★★★★★</div>
-                <div class="rev-tag" data-lang-section="en">E-Commerce</div>
-                <div class="rev-tag" data-lang-section="ar">متجر إلكتروني</div>
+            <!-- Rating stars -->
+            <div class="rev-field">
+              <label data-lang-section="en">Rating *</label>
+              <label data-lang-section="ar">التقييم *</label>
+              <div class="star-picker" id="starPicker" role="group" aria-label="Rating">
+                <button type="button" class="star-btn active" data-val="1" aria-label="1 star">★</button>
+                <button type="button" class="star-btn active" data-val="2" aria-label="2 stars">★</button>
+                <button type="button" class="star-btn active" data-val="3" aria-label="3 stars">★</button>
+                <button type="button" class="star-btn active" data-val="4" aria-label="4 stars">★</button>
+                <button type="button" class="star-btn active" data-val="5" aria-label="5 stars">★</button>
               </div>
-              <blockquote class="rev-quote" data-lang-section="en">
-                &ldquo;We needed a full e-commerce store with admin management on a tight deadline. Ali delivered exactly what we needed &mdash; clean code, great UX, and perfectly on schedule. Very professional.&rdquo;
-              </blockquote>
-              <blockquote class="rev-quote" data-lang-section="ar">
-                &ldquo;احتجنا متجر إلكتروني كامل مع لوحة إدارة في وقت ضيّق. علي سلّم بالضبط &mdash; كود نظيف، تجربة مستخدم ممتازة، وفي الموعد تماماً. محترف جداً.&rdquo;
-              </blockquote>
-              <div class="rev-author">
-                <div class="rev-avatar" style="background:linear-gradient(135deg,#22c55e,#16a34a)">RA</div>
-                <div class="rev-info">
-                  <div class="rev-name">Rania Abdullah</div>
-                  <div class="rev-loc" data-lang-section="en">&#128205; Dubai, UAE</div>
-                  <div class="rev-loc" data-lang-section="ar">&#128205; دبي، الإمارات العربية المتحدة</div>
-                  <div class="rev-role" data-lang-section="en">Beauty Products Entrepreneur</div>
-                  <div class="rev-role" data-lang-section="ar">رائدة أعمال منتجات تجميل</div>
-                </div>
-              </div>
+              <input type="hidden" id="rev-rating" name="rating" value="5">
             </div>
 
-            <!-- Card 4 -->
-            <div class="rev-card" style="--rc:#f59e0b">
-              <div class="rev-card-top">
-                <div class="rev-stars">★★★★★</div>
-                <div class="rev-tag" data-lang-section="en">AI Security</div>
-                <div class="rev-tag" data-lang-section="ar">أمن بالذكاء الاصطناعي</div>
-              </div>
-              <blockquote class="rev-quote" data-lang-section="en">
-                &ldquo;The AI weapon detection system Ali built for our security project truly exceeded expectations. Real-time alerts, accurate detection, and a solid backend integration that just works.&rdquo;
-              </blockquote>
-              <blockquote class="rev-quote" data-lang-section="ar">
-                &ldquo;نظام كشف الأسلحة بالذكاء الاصطناعي اللي بناه علي فاق توقعاتنا فعلاً. تنبيهات لحظية، كشف دقيق، وتكامل قوي مع الباك إند.&rdquo;
-              </blockquote>
-              <div class="rev-author">
-                <div class="rev-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">MH</div>
-                <div class="rev-info">
-                  <div class="rev-name">Mohammed Hamdan</div>
-                  <div class="rev-loc" data-lang-section="en">&#128205; Kampala, Uganda</div>
-                  <div class="rev-loc" data-lang-section="ar">&#128205; كمبالا، أوغندا</div>
-                  <div class="rev-role" data-lang-section="en">Security Systems Manager</div>
-                  <div class="rev-role" data-lang-section="ar">مدير أنظمة أمنية</div>
-                </div>
-              </div>
+            <!-- Message -->
+            <div class="rev-field">
+              <label for="rev-message" data-lang-section="en">Your Review *</label>
+              <label for="rev-message" data-lang-section="ar">تعليقك *</label>
+              <textarea id="rev-message" name="message" rows="4"
+                placeholder="Tell us about your experience working with Ali..." required></textarea>
+              <div class="rev-char-count"><span id="revCharCount">0</span> / 1000</div>
             </div>
 
-            <!-- Card 5 -->
-            <div class="rev-card" style="--rc:#0e75b6">
-              <div class="rev-card-top">
-                <div class="rev-stars">★★★★★</div>
-                <div class="rev-tag" data-lang-section="en">Corporate Site</div>
-                <div class="rev-tag" data-lang-section="ar">موقع شركة</div>
-              </div>
-              <blockquote class="rev-quote" data-lang-section="en">
-                &ldquo;Professional, responsive, and technically sharp. Ali built our company website and the result went far beyond what we imagined. His communication throughout the project was outstanding.&rdquo;
-              </blockquote>
-              <blockquote class="rev-quote" data-lang-section="ar">
-                &ldquo;محترف، متجاوب، وحاد تقنياً. علي بنى موقع شركتنا والنتيجة فاقت ما تخيلناه. تواصله مع العميل طوال المشروع كان ممتازاً.&rdquo;
-              </blockquote>
-              <div class="rev-author">
-                <div class="rev-avatar" style="background:linear-gradient(135deg,#0e75b6,#1d4ed8)">AO</div>
-                <div class="rev-info">
-                  <div class="rev-name">Ahmed Omar</div>
-                  <div class="rev-loc" data-lang-section="en">&#128205; Cairo, Egypt</div>
-                  <div class="rev-loc" data-lang-section="ar">&#128205; القاهرة، مصر</div>
-                  <div class="rev-role" data-lang-section="en">IT Company Director</div>
-                  <div class="rev-role" data-lang-section="ar">مدير شركة تقنية</div>
-                </div>
-              </div>
+            <!-- Submit -->
+            <button type="submit" class="btn primary rev-submit-btn" id="revSubmitBtn">
+              <span class="btn-text" data-lang-section="en">Submit Review</span>
+              <span class="btn-text" data-lang-section="ar">إرسال التقييم</span>
+              <span class="btn-spinner" id="revSpinner" style="display:none">⏳</span>
+            </button>
+
+            <!-- Status messages -->
+            <div id="revSuccess" class="rev-status rev-success" style="display:none">
+              <span data-lang-section="en">✅ Thank you! Your review has been saved.</span>
+              <span data-lang-section="ar">✅ شكراً! تم حفظ تقييمك.</span>
             </div>
+            <div id="revError" class="rev-status rev-error" style="display:none"></div>
 
-          </div><!-- /rev-track -->
-        </div><!-- /rev-carousel-wrap -->
-
-        <!-- Dots -->
-        <div class="rev-dots" id="revDots">
-          <button class="rev-dot active" data-idx="0"></button>
-          <button class="rev-dot" data-idx="1"></button>
-          <button class="rev-dot" data-idx="2"></button>
-          <button class="rev-dot" data-idx="3"></button>
-          <button class="rev-dot" data-idx="4"></button>
+          </form>
         </div>
 
       </section>
@@ -949,7 +1035,7 @@
     function setupReveals() {
       const targets = Array.from(
         document.querySelectorAll(
-          ".site-header, .hero-main, .hero-photo, .section-header, .about, .highlight-card, .service-card, .projects-group-header, .project-card, .skill-group, .experience, .credentials-card, .strengths-card, .testimonial-card, .contact-card"
+          ".site-header, .hero-main, .hero-photo, .section-header, .about, .highlight-card, .service-card, .projects-group-header, .project-card, .skill-group, .experience, .credentials-card, .strengths-card, .bento-card, .contact-card"
         )
       );
 
@@ -1021,56 +1107,208 @@
 
     setupReveals();
 
-    /* ── Carousel logic ── */
+    /* ═══════════════════════════════════════════════════════
+       REVIEWS — API integration
+    ═══════════════════════════════════════════════════════ */
     (function () {
-      var track = document.getElementById('revTrack');
-      var dots  = document.querySelectorAll('.rev-dot');
-      var prev  = document.getElementById('revPrev');
-      var next  = document.getElementById('revNext');
-      if (!track) return;
+      var API = '/api/reviews';
 
-      var cards = track.querySelectorAll('.rev-card');
-      var current = 0;
-      var autoTimer;
+      var COLORS = [
+        '#22d3ee','#a78bfa','#22c55e',
+        '#f59e0b','#0e75b6','#f97316','#ec4899'
+      ];
 
-      function scrollTo(idx) {
-        if (idx < 0) idx = cards.length - 1;
-        if (idx >= cards.length) idx = 0;
-        current = idx;
-        cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        dots.forEach(function (d, i) {
-          d.classList.toggle('active', i === current);
+      // ── helpers ──────────────────────────────────────────
+      function initials(name) {
+        return (name || '?').split(' ').slice(0, 2).map(function (w) {
+          return w[0] ? w[0].toUpperCase() : '';
+        }).join('');
+      }
+
+      function starsHtml(rating) {
+        var s = '';
+        for (var i = 1; i <= 5; i++) s += (i <= rating ? '★' : '☆');
+        return s;
+      }
+
+      function escHtml(str) {
+        var d = document.createElement('div');
+        d.textContent = str;
+        return d.innerHTML;
+      }
+
+      // ── Build one bento card element from a review object ─
+      function buildCard(rev, isFeatured) {
+        var color = rev.avatarColor || COLORS[0];
+        var init  = initials(rev.name);
+        var card  = document.createElement('div');
+        card.className = 'bento-card' + (isFeatured ? ' bento-featured' : '');
+        card.style.setProperty('--bc', color);
+
+        var locEn = rev.location ? '📍 ' + escHtml(rev.location) : '';
+        var roleColor = 'color:' + color;
+
+        card.innerHTML =
+          '<div class="bento-qmark">"</div>' +
+          '<div class="bento-top-row">' +
+            '<div class="bento-stars">' + starsHtml(rev.rating || 5) + '</div>' +
+            (rev.project ? '<span class="bento-badge">' + escHtml(rev.project) + '</span>' : '') +
+          '</div>' +
+          '<p class="bento-body">' + escHtml(rev.message) + '</p>' +
+          '<div class="bento-author">' +
+            '<div class="bento-avatar" style="background:' + color + '">' + escHtml(init) + '</div>' +
+            '<div class="bento-meta">' +
+              '<div class="bento-name">' + escHtml(rev.name) + '</div>' +
+              (locEn ? '<div class="bento-loc">' + locEn + '</div>' : '') +
+              (rev.role ? '<div class="bento-role" style="' + roleColor + '">' + escHtml(rev.role) + '</div>' : '') +
+            '</div>' +
+          '</div>';
+        return card;
+      }
+
+      // ── Load + render dynamic reviews ─────────────────────
+      function loadReviews() {
+        fetch(API)
+          .then(function (r) { return r.json(); })
+          .then(function (res) {
+            if (!res.success || !res.data.length) return;
+            var wrap = document.getElementById('dynamicReviewsWrap');
+            var grid = document.getElementById('dynamicReviewsGrid');
+            grid.innerHTML = '';
+            res.data.forEach(function (rev, idx) {
+              var card = buildCard(rev, idx === 0 && res.data.length > 1);
+              grid.appendChild(card);
+            });
+            wrap.style.display = '';
+            // trigger reveal on new cards
+            grid.querySelectorAll('.bento-card').forEach(function (el, i) {
+              el.classList.add('reveal');
+              el.style.setProperty('--reveal-delay', Math.min(i * 80, 320) + 'ms');
+              setTimeout(function () { el.classList.add('is-visible'); }, 100 + i * 80);
+            });
+          })
+          .catch(function () { /* server offline – silently skip */ });
+      }
+
+      loadReviews();
+
+      // ── Star picker ───────────────────────────────────────
+      var starBtns  = document.querySelectorAll('.star-btn');
+      var ratingInp = document.getElementById('rev-rating');
+      var currentRating = 5;
+
+      function setRating(val) {
+        currentRating = val;
+        ratingInp.value = val;
+        starBtns.forEach(function (btn) {
+          btn.classList.toggle('active', Number(btn.dataset.val) <= val);
         });
       }
 
-      if (prev) prev.addEventListener('click', function () { scrollTo(current - 1); resetAuto(); });
-      if (next) next.addEventListener('click', function () { scrollTo(current + 1); resetAuto(); });
-      dots.forEach(function (d) {
-        d.addEventListener('click', function () { scrollTo(Number(d.dataset.idx)); resetAuto(); });
+      starBtns.forEach(function (btn) {
+        btn.addEventListener('mouseenter', function () {
+          starBtns.forEach(function (b) {
+            b.classList.toggle('hover', Number(b.dataset.val) <= Number(btn.dataset.val));
+          });
+        });
+        btn.addEventListener('mouseleave', function () {
+          starBtns.forEach(function (b) { b.classList.remove('hover'); });
+        });
+        btn.addEventListener('click', function () {
+          setRating(Number(btn.dataset.val));
+        });
       });
 
-      /* Auto-advance every 5 s */
-      function startAuto() { autoTimer = setInterval(function () { scrollTo(current + 1); }, 5000); }
-      function resetAuto()  { clearInterval(autoTimer); startAuto(); }
-      startAuto();
-
-      /* Drag-to-scroll */
-      var startX = 0, scrollLeft = 0, down = false;
-      track.addEventListener('mousedown', function (e) { down = true; startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft; track.classList.add('is-dragging'); });
-      track.addEventListener('mouseleave', function () { down = false; track.classList.remove('is-dragging'); });
-      track.addEventListener('mouseup',    function () { down = false; track.classList.remove('is-dragging'); });
-      track.addEventListener('mousemove',  function (e) { if (!down) return; e.preventDefault(); track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX); });
-
-      /* Sync dots on native scroll */
-      track.addEventListener('scroll', function () {
-        var mid = track.scrollLeft + track.clientWidth / 2;
-        cards.forEach(function (c, i) {
-          if (c.offsetLeft <= mid && c.offsetLeft + c.offsetWidth > mid) {
-            if (current !== i) { current = i; dots.forEach(function (d, j) { d.classList.toggle('active', j === i); }); }
-          }
+      // ── Char counter ──────────────────────────────────────
+      var msgArea   = document.getElementById('rev-message');
+      var charCount = document.getElementById('revCharCount');
+      if (msgArea && charCount) {
+        msgArea.addEventListener('input', function () {
+          charCount.textContent = msgArea.value.length;
         });
-      }, { passive: true });
+      }
+
+      // ── Form submission ───────────────────────────────────
+      var form       = document.getElementById('reviewForm');
+      var submitBtn  = document.getElementById('revSubmitBtn');
+      var spinner    = document.getElementById('revSpinner');
+      var successDiv = document.getElementById('revSuccess');
+      var errorDiv   = document.getElementById('revError');
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          successDiv.style.display = 'none';
+          errorDiv.style.display   = 'none';
+
+          var name    = (document.getElementById('rev-name').value    || '').trim();
+          var role    = (document.getElementById('rev-role').value     || '').trim();
+          var location= (document.getElementById('rev-location').value || '').trim();
+          var project = (document.getElementById('rev-project').value  || '').trim();
+          var rating  = Number(document.getElementById('rev-rating').value) || 5;
+          var message = (document.getElementById('rev-message').value  || '').trim();
+
+          if (!name) {
+            showError('Please enter your name.');
+            return;
+          }
+          if (!message || message.length < 10) {
+            showError('Review must be at least 10 characters.');
+            return;
+          }
+
+          // Loading state
+          submitBtn.disabled = true;
+          spinner.style.display = '';
+          submitBtn.querySelector('.btn-text') && (submitBtn.querySelector('.btn-text').style.opacity = '0.5');
+
+          fetch(API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: name, role: role, location: location, project: project, rating: rating, message: message })
+          })
+            .then(function (r) { return r.json(); })
+            .then(function (res) {
+              submitBtn.disabled = false;
+              spinner.style.display = 'none';
+              submitBtn.querySelector('.btn-text') && (submitBtn.querySelector('.btn-text').style.opacity = '');
+
+              if (res.success) {
+                form.reset();
+                setRating(5);
+                charCount.textContent = '0';
+                successDiv.style.display = '';
+
+                // prepend new card to dynamic grid immediately
+                var wrap = document.getElementById('dynamicReviewsWrap');
+                var grid = document.getElementById('dynamicReviewsGrid');
+                wrap.style.display = '';
+                var card = buildCard(res.data, false);
+                card.classList.add('reveal');
+                grid.appendChild(card);
+                setTimeout(function () { card.classList.add('is-visible'); }, 80);
+                setTimeout(function () { successDiv.style.display = 'none'; }, 5000);
+              } else {
+                showError(res.error || 'Something went wrong. Please try again.');
+              }
+            })
+            .catch(function () {
+              submitBtn.disabled = false;
+              spinner.style.display = 'none';
+              showError('Cannot connect to server. Make sure the backend is running.');
+            });
+        });
+      }
+
+      function showError(msg) {
+        errorDiv.textContent = '⚠️ ' + msg;
+        errorDiv.style.display = '';
+        setTimeout(function () { errorDiv.style.display = 'none'; }, 6000);
+      }
+
     }());
+
 </script>
 </body>
 </html>
