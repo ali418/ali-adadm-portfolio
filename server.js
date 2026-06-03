@@ -9,7 +9,7 @@ const reviewsRouter = require('./routes/reviews');
 
 const app  = express();
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio_reviews';
+const MONGODB_URI = process.env.MONGO_URL || process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio_reviews';
 
 // ── Middleware ──────────────────────────────────────────────
 app.use(cors());
